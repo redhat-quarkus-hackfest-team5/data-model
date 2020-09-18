@@ -37,16 +37,32 @@
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-infinispan-client</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-resteasy-jsonb</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
             <plugin>
+                <groupId>org.jboss.jandex</groupId>
+                <artifactId>jandex-maven-plugin</artifactId>
+                <version>1.0.8</version>
+                <executions>
+                    <execution>
+                        <id>make-index</id>
+                        <goals>
+                            <goal>jandex</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${compiler-plugin.version}</version>
             </plugin>
         </plugins>
-
     </build>
 
 
