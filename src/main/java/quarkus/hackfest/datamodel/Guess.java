@@ -1,5 +1,8 @@
 package quarkus.hackfest.datamodel;
 
+import io.quarkus.runtime.annotations.RegisterForReflection;
+
+@RegisterForReflection
 public class Guess {
 
    private String gp;

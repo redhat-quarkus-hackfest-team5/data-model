@@ -3,6 +3,9 @@ package quarkus.hackfest.datamodel;
 import org.infinispan.protostream.annotations.ProtoFactory;
 import org.infinispan.protostream.annotations.ProtoField;
 
+import io.quarkus.runtime.annotations.RegisterForReflection;
+
+@RegisterForReflection
 public class DriverStats {
     private String driver;
     private Integer count;
